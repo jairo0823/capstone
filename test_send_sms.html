@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Send SMS</title>
+</head>
+<body>
+    <h1>Test Send SMS</h1>
+    <form method="post" action="send.php?api=send_sms">
+        <label for="number">Number:</label>
+        <input type="text" name="number" id="number" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+        <br>
+        <fieldset>
+            <legend>Provider:</legend>
+            <label>
+                <input type="radio" name="provider" value="infobip" checked> Infobip
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="provider" value="twilio"> Twilio
+            </label>
+        </fieldset>
+        <button type="submit">Send SMS</button>
+    </form>
+</body>
+</html>
